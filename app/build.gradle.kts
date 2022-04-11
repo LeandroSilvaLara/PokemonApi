@@ -5,16 +5,16 @@ plugins {
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
 }
-apply(from = "../ktlint.gradle")
+apply(from = "../ktlint.gradle.kts")
 
 android {
-    compileSdk 31
+    compileSdk = 31
     defaultConfig {
-        applicationId "com.br.leandro.pokemonapi"
-        minSdk 23
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        applicationId = "com.br.leandro.pokemonapi"
+        minSdk = 23
+        targetSdk = 31
+        versionCode = 1
+        versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,17 +40,8 @@ android {
 }
 
 dependencies {
-
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.navigation:navigation-fragment:2.3.5'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+
 
     // Architecture
     implementation("androidx.appcompat:appcompat:1.3.1")
